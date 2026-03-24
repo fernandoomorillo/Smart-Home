@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Hogar Inteligente</title>
+  <link rel="stylesheet" href="SmartHomee.css" />
+  <base target="_blank">
+</head>
+
+<body>
+  <input type="checkbox" id="interruptor-menu" />
+  <input type="checkbox" id="interruptor-tema" />
+  <input type="checkbox" id="luz-salon" />
+  <input type="checkbox" id="luz-cocina" />
+  <input type="checkbox" id="luz-dormitorio" />
+  <input type="checkbox" id="luz-terraza" />
+  <div class="pagina">
+    <div class="menu-lateral">
+      <div class="menu-lateral__panel">
+        <div class="menu-lateral__cabecera">
+          <span class="menu-lateral__titulo">Mi Hogar Inteligente</span>
+          <label class="menu-lateral__cerrar" for="interruptor-menu">&#10005;</label>
+        </div>
+        <nav>
+          <ul class="menu-lateral__lista">
+            <li><a href="#inicio" class="menu-lateral__enlace">Inicio</a></li>
+            <li><a href="#sobre-la-app" class="menu-lateral__enlace">Que es esto</a></li>
+            <li><a href="#controles" class="menu-lateral__enlace">Controles</a></li>
+            <li><a href="#pie-pagina" class="menu-lateral__enlace">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+      <label class="menu-lateral__fondo" for="interruptor-menu"></label>
+    </div>
+    <nav class="barra-nav">
+      <div class="barra-nav__interior">
+        <span class="barra-nav__logo">Mi Hogar</span>
+        <label class="boton-tema" for="interruptor-tema">
+          <span class="boton-tema__dia">Modo Claro</span>
+          <span class="boton-tema__noche">Modo Oscuro</span>
+        </label>
+      </div>
+    </nav>
+    <header class="cabecera" id="inicio">
+      <div class="cabecera__tarjeta">
+        <div>
+          <span class="etiqueta-pequeña">Panel de control</span>
+          <h1 class="cabecera__titulo">Mi Hogar Inteligente</h1>
+          <p class="cabecera__descripcion">Controla temperatura, luces, energia y seguridad desde una sola pantalla.</p>
+        </div>
+        <div class="estado-rapido">
+          <span class="pastilla"><span class="punto punto--verde"></span> Wi-Fi activo</span>
+          <span class="pastilla"><span class="punto punto--verde"></span> Alarma encendida</span>
+          <span class="pastilla"><span class="punto punto--verde"></span> Puertas cerradas</span>
+        </div>
+      </div>
+    </header>
+    <section class="seccion" id="sobre-la-app">
+      <p class="seccion__titulo-apartado">Sobre la aplicacion</p>
+      <div class="cuadricula-tarjetas">
+        <div class="tarjeta-info">
+          <h3>Que es Mi Hogar Inteligente?</h3>
+          <p>Imagina poder controlar toda tu casa desde una sola pantalla. Sin levantarte del sofa, sabes si dejaste una
+            ventana abierta, cuanta energia gastas o si las luces siguen encendidas.</p>
+        </div>
+        <div class="tarjeta-info">
+          <h3>Ahorra energia sin esfuerzo</h3>
+          <p>El panel muestra cuanta luz electrica consumes hoy y este mes, con una barra que te indica al instante si
+            vas bien. Ver los numeros cambia los habitos.</p>
+        </div>
+        <div class="tarjeta-info">
+          <h3>Temperatura a tu gusto</h3>
+          <p>El widget de temperatura muestra el clima interior junto con la humedad. Fija tu objetivo y el sistema te
+            dice si la calefaccion o el aire acondicionado estan activos.</p>
+        </div>
+        <div class="tarjeta-info">
+          <h3>Luces bajo control</h3>
+          <p>Saliste de casa y no sabes si apagaste la luz del salon? Desde aqui puedes verlo y apagarla en un toque.
+            Salon, cocina, dormitorio o terraza.</p>
+        </div>
+      </div>
+    </section>
+    <main class="seccion" id="controles">
+      <p class="seccion__titulo-apartado">Controles</p>
+      <div class="cuadricula-widgets">
+        <article class="widget">
+          <div class="widget__cabecera">
+            <h2 class="widget__nombre">Temperatura</h2>
+          </div>
+          <div class="temperatura__cuerpo">
+            <p class="temperatura__numero">22<span class="temperatura__grados">C</span></p>
+            <div class="temperatura__detalles">
+              <p><span class="texto-apagado">Objetivo</span> <strong>21 C</strong></p>
+              <p><span class="texto-apagado">Humedad</span> <strong>45%</strong></p>
+            </div>
+          </div>
+        </article>
+        <article class="widget">
+          <div class="widget__cabecera">
+            <h2 class="widget__nombre">Luces</h2>
+          </div>
+          <label class="fila-luz fila-luz--salon" for="luz-salon">
+            <div class="fila-luz__izquierda"><span class="fila-luz__punto"></span><span>Salon</span></div>
+            <span class="fila-luz__estado"></span>
+          </label>
+          <label class="fila-luz fila-luz--cocina" for="luz-cocina">
+            <div class="fila-luz__izquierda"><span class="fila-luz__punto"></span><span>Cocina</span></div>
+            <span class="fila-luz__estado"></span>
+          </label>
+          <label class="fila-luz fila-luz--dormitorio" for="luz-dormitorio">
+            <div class="fila-luz__izquierda"><span class="fila-luz__punto"></span><span>Dormitorio</span></div>
+            <span class="fila-luz__estado"></span>
+          </label>
+          <label class="fila-luz fila-luz--terraza" for="luz-terraza">
+            <div class="fila-luz__izquierda"><span class="fila-luz__punto"></span><span>Terraza</span></div>
+            <span class="fila-luz__estado"></span>
+          </label>
+        </article>
+        <article class="widget">
+          <div class="widget__cabecera">
+            <h2 class="widget__nombre">Consumo electrico</h2>
+          </div>
+          <div class="energia__fila-principal">
+            <p class="energia__numero">6.4<span class="energia__unidad"> kWh</span></p>
+            <span class="energia__ahorro">Ahorrando</span>
+          </div>
+          <p class="texto-apagado energia__meta">Este mes: 142 kWh · Objetivo: 200 kWh</p>
+          <div class="barra-progreso">
+            <div class="barra-progreso__relleno"></div>
+          </div>
+          <div class="barra-progreso__etiquetas">
+            <span>0 kWh</span><span>6.4 / 8 kWh</span><span>8 kWh</span>
+          </div>
+        </article>
+        <article class="widget">
+          <div class="widget__cabecera">
+            <h2 class="widget__nombre">Estado de la casa</h2>
+          </div>
+          <ul class="lista-estado">
+            <li class="lista-estado__fila">
+              <span class="texto-apagado">Puertas</span>
+              <span class="lista-estado__valor"><span class="punto punto--verde"></span> Cerradas</span>
+            </li>
+            <li class="lista-estado__fila">
+              <span class="texto-apagado">Ventanas</span>
+              <span class="lista-estado__valor"><span class="punto punto--naranja"></span> 1 abierta</span>
+            </li>
+            <li class="lista-estado__fila">
+              <span class="texto-apagado">Alarma</span>
+              <span class="lista-estado__valor"><span class="punto punto--verde"></span> Encendida</span>
+            </li>
+            <li class="lista-estado__fila">
+              <span class="texto-apagado">Wi-Fi</span>
+              <span class="lista-estado__valor"><span class="punto punto--verde"></span> Operativo</span>
+            </li>
+          </ul>
+        </article>
+        <article class="widget">
+          <div class="widget__cabecera">
+            <div>
+              <h2 class="widget__nombre">Calidad del aire</h2>
+            </div>
+            <span class="etiqueta-estado etiqueta-estado--verde">Buena</span>
+          </div>
+          <div class="aire__principal">
+            <div class="aire__indice">
+              <p class="aire__numero">42</p>
+              <p class="aire__etiqueta">IAQ</p>
+            </div>
+            <div class="aire__arco-contenedor">
+              <!-- Esto es el arco que aparece en el cuadro de la calidad del aire-->
+              <svg viewBox="0 0 100 55" class="aire__arco" aria-hidden="true">
+                <path d="M 10 50 A 40 40 0 0 1 90 50" class="aire__arco-fondo" />
+                <path d="M 10 50 A 40 40 0 0 1 90 50" class="aire__arco-relleno" stroke-dasharray="100 126" />
+              </svg>
+              <p class="aire__texto-estado">Excelente</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </main>
+    <footer class="pie-pagina" id="pie-pagina">
+      <div class="pie-pagina__interior">
+        <div class="pie-pagina__superior">
+          <p class="pie-pagina__nombre">Mi Hogar Inteligente</p>
+          <div class="pie-pagina__columnas">
+            <div>
+              <p class="pie-pagina__titulo-col">Legal</p>
+              <ul class="pie-pagina__lista">
+                <li>Aviso legal</li>
+                <li>Privacidad</li>
+                <li>Terminos de uso</li>
+              </ul>
+            </div>
+            <div>
+              <p class="pie-pagina__titulo-col">Accesibilidad</p>
+              <ul class="pie-pagina__lista">
+                <li>Declaracion</li>
+                <li>Alto contraste</li>
+                <li>Teclado</li>
+              </ul>
+            </div>
+            <div>
+              <p class="pie-pagina__titulo-col">Soporte</p>
+              <ul class="pie-pagina__lista">
+                <li>Centro de ayuda</li>
+                <li>Estado del servicio</li>
+                <li>Reportar un problema</li>
+              </ul>
+            </div>
+            <div>
+              <p class="pie-pagina__titulo-col">Producto</p>
+              <ul class="pie-pagina__lista">
+                <li>Novedades</li>
+                <li>Dispositivos</li>
+                <li>Seguridad</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="pie-pagina__inferior">
+          <div class="pie-pagina__legal">
+            <span>Privacidad</span>
+            <span>Cookies</span>
+            <span>Accesibilidad</span>
+            <span>Mapa del sitio</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
