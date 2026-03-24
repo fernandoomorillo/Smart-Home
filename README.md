@@ -9,6 +9,8 @@ Primero hacemos un figma para decidir como ibamos a estructurar la página web y
 ## Desarrollo en HTML y CSS
 Cuando terminamos el figma, ahora pasamos todas las ideas a HTML y CSS, el desarrollo se realizó en Visual Studio Code.
 
-## Herramientas utilizadas
+## Herramientas y tecnologías utilizadas 
 - Figma
 - Visual Studio Code
+- HTML
+- CSS
